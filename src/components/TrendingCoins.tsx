@@ -44,7 +44,7 @@ function TrendingCoins() {
       <div className="text-2xl font-semibold text-[#0F1629]">
         Trending Coins (24h)
       </div>
-      <div className="mt-4">
+      <div className="mt-4 z-0">
         {coinsData.map((coin, index) => (
           <Coin
             key={index}
