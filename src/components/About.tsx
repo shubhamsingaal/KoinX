@@ -55,9 +55,9 @@ function About() {
           <div className="text-[#0F1629] text-2xl font-semibold">
             Already Holding Bitcoin?
           </div>
-          <div className="flex border-b-2 border-[#C9CFDD]/40 pb-4">
+          <div className="flex flex-col lg:flex-row border-b-2 border-[#C9CFDD]/40 pb-4">
             <div className="mt-4">
-              <div className="w-[400px] h-[151px] bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-lg flex">
+              <div className=" w-[305px] lg:w-[400px] lg:w-[400px] h-[151px] bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] rounded-lg flex">
                 <div className="p-3">
                   <img
                     className="w-32 h-32 rounded-xl object-right object-cover"
@@ -76,8 +76,8 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="mt-4 ml-8">
-              <div className="w-[400px] h-[151px] bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-lg flex">
+            <div className="mt-4 ml-0 lg:ml-8">
+              <div className="md:w-[305px]  lg:w-[400px] h-[151px] bg-gradient-to-br from-[#FF9865] to-[#EF3031] rounded-lg flex">
                 <div className="p-3">
                   <img
                     className="w-32 h-32 rounded-xl object-right object-cover"
