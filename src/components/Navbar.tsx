@@ -10,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <div className="lg:h-20 h-16 flex items-center justify-between shadow-[#1026490F]/10  shadow-md bg-[#FFFFFF]  w-screen">
+    <div className="lg:h-20 h-16 flex items-center justify-between shadow-[#1026490F]/10  shadow-md bg-[#FFFFFF]  w-full">
       <div>
         <img src={logo} alt="Logo" className="w-24 h-6 lg:ml-14 ml-4"></img>
       </div>
