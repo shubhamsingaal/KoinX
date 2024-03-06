@@ -40,11 +40,11 @@ function TrendingCoins() {
   }, []);
 
   return (
-    <div className=" h-[225px] bg-white ml-4 mt-4 rounded-lg px-8 pt-5">
+    <div className=" min-h-[225px]  bg-white ml-4 mt-4 rounded-lg px-8 pt-5">
       <div className="text-2xl font-semibold text-[#0F1629]">
         Trending Coins (24h)
       </div>
-      <div className="mt-4 z-0">
+      <div className="mt-4 mb-2 z-0">
         {coinsData.map((coin, index) => (
           <Coin
             key={index}

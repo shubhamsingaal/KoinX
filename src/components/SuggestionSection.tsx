@@ -9,7 +9,7 @@ function SuggestionSection() {
       .get("https://api.coingecko.com/api/v3/search/trending")
       .then((response) => {
         setCryptoData(response.data.coins);
-        console.log(response.data.coins);
+        console.log(response.data.coins)
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
