@@ -9,7 +9,7 @@ function PerformanceSection() {
           <div className="flex justify-between ">
             <div className="text-start">
               <div className="text-sm text-[#44475B] font-normal p-1">
-                Today’s Low
+                Today's Low
               </div>
               <div className="text-[#44475B] text-lg font-medium p-1">
                 46,930.22
@@ -31,7 +31,7 @@ function PerformanceSection() {
             </div>
             <div className="text-end">
               <div className="text-sm text-[#44475B] font-normal p-1 ">
-                Today’s High
+                Today's High
               </div>
               <div className="text-[#44475B] text-lg font-medium p-1">
                 49,343.83
