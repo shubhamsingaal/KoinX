@@ -6,7 +6,7 @@ function Tokenomics() {
         <div className="text-[#1D1D1D] text-xl font-semibold">
           Initial Distribution
         </div>
-        <div className="py-4 flex ">
+        <div className="py-4 flex overflow-x-scroll ">
           <div>
             <svg
               width="179"

@@ -12,8 +12,8 @@ function SentimentSection() {
             <IoMdInformationCircle className="text-[#ABB9BF] text-lg ml-2" />
           </div>
         </div>
-        <div className="lg:flex overflow-x-auto">
-          <div className="lg:w-[456px]  bg-[#E8F4FD] h-[204px] rounded-xl overflow-y-hidden">
+        <div className="flex flex-row py-4 gap-x-4 overflow-x-auto">
+          <div className="min-w-[15em] lg:w-[456px]  bg-[#E8F4FD] min-h-[204px] rounded-xl overflow-y-hidden">
             <div className="p-4 flex">
               <div className="bg-[#0082FF] w-11 h-11 rounded-full justify-center flex items-center">
                 <svg
@@ -34,9 +34,9 @@ function SentimentSection() {
                   Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim
                   mattis enim tincidunt.
                 </div>
-                <div className="text-sm font-normal text-[#3E5765] whitespace-normal mt-2">
-                  Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est
-                  faucibus metus quis. Amet sapien quam viverra adipiscing
+                <div className="lg:text-sm text-xs font-normal text-[#3E5765] whitespace-normal mt-2 over">
+                  Lorem ipsum dolor sit amet consectetur. Ac phasellus risus
+                  est faucibus metus quis. Amet sapien quam viverra adipiscing
                   condimentum. Ac consectetur et pretium in a bibendum in. Sed
                   vitae sit nisi viverra natoque lacinia libero enim.
                 </div>
@@ -44,7 +44,7 @@ function SentimentSection() {
             </div>
           </div>
 
-          <div className="lg:w-[456px] bg-[#EBF9F4] h-[204px] rounded-xl lg:ml-4 mt-4 lg:mt-0 overflow-y-hidden">
+          <div className=" min-w-[15em] lg:w-[456px] bg-[#EBF9F4] min-h-[204px] rounded-xl lg:ml-4  overflow-y-hidden">
             <div className="p-4 flex">
               <div className="bg-[#0FBA83] w-11 h-11 rounded-full justify-center flex items-center">
                 <svg
@@ -75,7 +75,7 @@ function SentimentSection() {
                   Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim
                   mattis enim tincidunt.
                 </div>
-                <div className="relative">
+                <div className="hidden lg:flex relative">
                   <div className="absolute top-1/2 left-full transform -translate-y-1/2 -ml-8 bg-white p-4 rounded-full cursor-pointer">
                     <FaAngleRight className="text-[#757779]" />
                   </div>

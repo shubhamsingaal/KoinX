@@ -71,7 +71,7 @@ function PerformanceSection() {
             </div>
           </div>
           <div className="lg:flex mb-8">
-            <div className="w-1/2 mr-10 mt-3  ">
+            <div className="w-full lg:w-1/2 mr-10 mt-3  ">
               <div className="flex justify-between py-5 border-b-2 border-[#D3E0E6]">
                 <div className="text-[#768396] text-sm font-semibold">
                   Bitcoin Price
@@ -113,7 +113,7 @@ function PerformanceSection() {
                 </div>
               </div>
             </div>
-            <div className="w-1/2 ml-10 mt-3">
+            <div className=" w-full lg:w-1/2  lg:ml-10 mt-3">
               <div className="flex justify-between py-5 border-b-2 border-[#D3E0E6]">
                 <div className="text-[#768396] text-sm font-semibold">
                   Market Cap

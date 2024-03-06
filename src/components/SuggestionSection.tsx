@@ -9,6 +9,7 @@ function SuggestionSection() {
       .get("https://api.coingecko.com/api/v3/search/trending")
       .then((response) => {
         setCryptoData(response.data.coins);
+        console.log(response.data.coins);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -22,7 +23,7 @@ function SuggestionSection() {
           You May Also Like
         </div>
 
-        <div className="mt-4 flex justify-between overflow-x-scroll overflow-auto  ">
+        <div className="mt-4 flex justify-between  overflow-auto  ">
           {(cryptoData as any[]).slice(0, 5).map((crypto, index) => (
             <CryptoCard key={index} cryptoData={crypto.item} />
           ))}
