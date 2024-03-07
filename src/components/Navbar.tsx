@@ -22,7 +22,7 @@ function Navbar() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div>
         <img src={logo} alt="Logo" className="w-24 h-6 lg:ml-14 ml-4"></img>
