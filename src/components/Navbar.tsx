@@ -25,7 +25,7 @@ function Navbar() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <div>
-        <img src={logo} alt="Logo" className="w-24 h-6 lg:ml-14 ml-4"></img>
+        <img src={logo} alt="Logo" className="cursor-pointer w-24 h-6 lg:ml-14 ml-4"></img>
       </div>
       {/* For larger screens */}
       <motion.div className="hidden lg:flex items-center">

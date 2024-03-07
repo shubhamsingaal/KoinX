@@ -26,13 +26,17 @@ function CoinPage() {
              <Tokenomics/>
              <Team/>
         </div>
-        <div className="lg:w-4/12 lg:mr-14 mx-2">
-          <CradsPromo/>
-          <TrendingCoins/>
+ <div className="lg:w-4/12 lg:mr-14 mx-2">
+          <div className="lg:hidden">
+            <SuggestionSection />
+          </div>
+          <CradsPromo />
+          <TrendingCoins />
         </div>
-        
       </div>
-        <SuggestionSection/>
+      <div className="max-lg:hidden">
+        <SuggestionSection />
+      </div>
     </div>
   )
 }
