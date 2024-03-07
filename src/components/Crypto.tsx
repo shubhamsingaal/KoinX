@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import TradingViewWidget from "./TradingViewWidget";
 import img from "../assets/btc.png";
+import { motion } from "framer-motion";
 
 interface CryptoData {
   inr: number;
@@ -9,6 +10,11 @@ interface CryptoData {
   usd: number;
   usd_24h_change: number;
 }
+
+const fadeInVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 2 } },
+};
 
 function Crypto(): JSX.Element {
   const [cryptoData, setCryptoData] = useState<CryptoData | null>(null);
@@ -33,7 +39,12 @@ function Crypto(): JSX.Element {
   }, []);
 
   return (
-    <div className="bg-white h-max rounded-lg my-5 p-6">
+    <motion.div
+      className="bg-white h-max rounded-lg my-5 p-6"
+      variants={fadeInVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex items-center">
         <div>
           <img src={img} className="w-9" alt="Bitcoin" />
@@ -55,12 +66,13 @@ function Crypto(): JSX.Element {
             {(cryptoData && `₹ ${cryptoData.inr}`) || `₹ 5535287`}
           </div>
         </div>
-        <div
+        <motion.div
           className={`flex items-center justify-center rounded-lg p-2 h-10 ml-10 ${
             cryptoData && cryptoData.inr_24h_change < 0
               ? "bg-red-300/20"
               : "bg-green-300/20"
           }`}
+          variants={fadeInVariants}
         >
           <svg
             viewBox="0 0 100 100"
@@ -83,7 +95,7 @@ function Crypto(): JSX.Element {
               `${Math.abs(cryptoData.inr_24h_change).toFixed(2)}%`) ||
               `2.18%`}
           </span>
-        </div>
+        </motion.div>
 
         <div className="text-sm text-[#768396] ml-2 mt-2">(24H)</div>
       </div>
@@ -95,9 +107,12 @@ function Crypto(): JSX.Element {
         <div className="flex lg:space-x-5 space-x-3 mr-4 text-sm text-[#5D667B] font-medium text-center items-center">
           <div>1H</div>
           <div>24H</div>
-          <div className="text-[#0141CF] bg-[#E2ECFE] rounded-3xl px-3 py-1">
+          <motion.div
+            className="text-[#0141CF] bg-[#E2ECFE] rounded-3xl px-3 py-1"
+            variants={fadeInVariants}
+          >
             7D
-          </div>
+          </motion.div>
           <div>1M</div>
           <div>3M</div>
           <div>6M</div>
@@ -108,7 +123,7 @@ function Crypto(): JSX.Element {
       <div className="lg:h-[420px] h-[300px]">
         <TradingViewWidget />
       </div>
-    </div>
+    </motion.div>
   );
 }
 
