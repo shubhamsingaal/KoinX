@@ -1,15 +1,33 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function SuggestionSection() {
   const [cryptoData, setCryptoData] = useState([]);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+  const controls = useAnimation();
+
+  const fadeInVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 3 } },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      // Start animation when the section is in view
+      controls.start({ opacity: 1 });
+    }
+  }, [inView, controls]);
 
   useEffect(() => {
     axios
       .get("https://api.coingecko.com/api/v3/search/trending")
       .then((response) => {
         setCryptoData(response.data.coins);
-        console.log(response.data.coins)
+        console.log(response.data.coins);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -17,7 +35,13 @@ function SuggestionSection() {
   }, []);
 
   return (
-    <div className="bg-white h-max mt-10 lg:p-14 p-8">
+    <motion.div
+      className="bg-white h-max mt-10 lg:p-14 p-8"
+      variants={fadeInVariants}
+      initial="hidden"
+      animate={controls}
+      ref={ref}
+    >
       <div>
         <div className="text-[#202020] text-2xl font-semibold">
           You May Also Like
@@ -38,7 +62,7 @@ function SuggestionSection() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
